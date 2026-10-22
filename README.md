@@ -1,16 +1,28 @@
-# React + Vite
+# KYC Onboarding Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A multi-step identity verification flow built with React and Vite, inspired by the KYC onboarding used in fintech and payment apps.
 
-Currently, two official plugins are available:
+**Live demo:** coming soon
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features so far
+- Progress bar that tracks the current step
+- Personal info form (full name, email, date of birth) using controlled inputs and React state
 
-## React Compiler
+## Roadmap
+- [ ] One form per step with Next/Back
+- [ ] Address form
+- [ ] ID upload step
+- [ ] Review screen and status
+- [ ] Form validation with clear error messages
+- [ ] Deploy to Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
+React · Vite · JavaScript · CSS
 
-## Expanding the Oxlint configuration
+## Run locally
+Run `npm install`, then `npm run dev`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+> Fake data only. No real personal information is collected or stored.
+
+## License
+MIT
