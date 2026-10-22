@@ -1,6 +1,6 @@
-import PersonalInfoForm from './components/PersonalInfoForm'
 import { useState } from 'react'
 import ProgressBar from './components/ProgressBar'
+import PersonalInfoForm from './components/PersonalInfoForm'
 
 function App() {
   const [step, setStep] = useState(1)
@@ -10,9 +10,18 @@ function App() {
       <h1>Open Your Account</h1>
       <p>Verify your identity in a few quick steps.</p>
       <ProgressBar currentStep={step} />
-      <PersonalInfoForm />
-      <p>You are on step {step} of 4</p>
-      <button onClick={() => setStep(step + 1)}>Next</button>
+
+      {step === 1 && <PersonalInfoForm />}
+      {step === 2 && <div className="form">Address form coming soon</div>}
+      {step === 3 && <div className="form">ID upload coming soon</div>}
+      {step === 4 && <div className="form">Review coming soon</div>}
+
+      <button onClick={() => setStep(step - 1)} disabled={step === 1}>
+        Back
+      </button>
+      <button onClick={() => setStep(step + 1)} disabled={step === 4}>
+        Next
+      </button>
     </div>
   )
 }
