@@ -1,12 +1,19 @@
 import { useState } from 'react'
 import ProgressBar from './components/ProgressBar'
 import PersonalInfoForm from './components/PersonalInfoForm'
+import AddressForm from './components/AddressForm'
 
 function App() {
   const [step, setStep] = useState(1)
+
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [dob, setDob] = useState('')
+
+  const [street, setStreet] = useState('')
+  const [city, setCity] = useState('')
+  const [country, setCountry] = useState('')
+  const [postalCode, setPostalCode] = useState('')
 
   return (
     <div>
@@ -24,7 +31,18 @@ function App() {
           setDob={setDob}
         />
       )}
-      {step === 2 && <div className="form">Address form coming soon</div>}
+      {step === 2 && (
+        <AddressForm
+          street={street}
+          setStreet={setStreet}
+          city={city}
+          setCity={setCity}
+          country={country}
+          setCountry={setCountry}
+          postalCode={postalCode}
+          setPostalCode={setPostalCode}
+        />
+      )}
       {step === 3 && <div className="form">ID upload coming soon</div>}
       {step === 4 && <div className="form">Review coming soon</div>}
 

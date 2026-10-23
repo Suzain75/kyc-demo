@@ -65,3 +65,14 @@ button:disabled {
   background: #b8c2dc;
   cursor: not-allowed;
 }
+
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c9cfdc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  background: white;
+}
