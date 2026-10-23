@@ -1,10 +1,4 @@
-import { useState } from 'react'
-
-function PersonalInfoForm() {
-  const [fullName, setFullName] = useState('')
-  const [email, setEmail] = useState('')
-  const [dob, setDob] = useState('')
-
+function PersonalInfoForm({ fullName, setFullName, email, setEmail, dob, setDob }) {
   return (
     <div className="form">
       <label>Full name</label>
@@ -14,7 +8,8 @@ function PersonalInfoForm() {
         onChange={(e) => setFullName(e.target.value)}
         placeholder="Type a fake name"
       />
-       <label>Email</label>
+
+      <label>Email</label>
       <input
         type="email"
         value={email}
