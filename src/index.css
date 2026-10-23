@@ -76,3 +76,8 @@ button:disabled {
   margin-bottom: 16px;
   background: white;
 }
+
+.note {
+  font-size: 13px;
+  color: #6b7280;
+}

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ProgressBar from './components/ProgressBar'
 import PersonalInfoForm from './components/PersonalInfoForm'
 import AddressForm from './components/AddressForm'
+import IdUploadForm from './components/IdUploadForm'
 
 function App() {
   const [step, setStep] = useState(1)
@@ -14,6 +15,9 @@ function App() {
   const [city, setCity] = useState('')
   const [country, setCountry] = useState('')
   const [postalCode, setPostalCode] = useState('')
+
+  const [idType, setIdType] = useState('')
+  const [idFile, setIdFile] = useState(null)
 
   return (
     <div>
@@ -43,7 +47,14 @@ function App() {
           setPostalCode={setPostalCode}
         />
       )}
-      {step === 3 && <div className="form">ID upload coming soon</div>}
+      {step === 3 && (
+        <IdUploadForm
+          idType={idType}
+          setIdType={setIdType}
+          idFile={idFile}
+          setIdFile={setIdFile}
+        />
+      )}
       {step === 4 && <div className="form">Review coming soon</div>}
 
       <button onClick={() => setStep(step - 1)} disabled={step === 1}>
