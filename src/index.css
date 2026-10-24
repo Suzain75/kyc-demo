@@ -81,3 +81,17 @@ button:disabled {
   font-size: 13px;
   color: #6b7280;
 }
+
+.form h2 {
+  margin-top: 0;
+}
+
+.form h3 {
+  margin: 20px 0 6px;
+  font-size: 16px;
+  color: #2f5bea;
+}
+
+.form p {
+  margin: 4px 0;
+}

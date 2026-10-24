@@ -3,6 +3,7 @@ import ProgressBar from './components/ProgressBar'
 import PersonalInfoForm from './components/PersonalInfoForm'
 import AddressForm from './components/AddressForm'
 import IdUploadForm from './components/IdUploadForm'
+import ReviewScreen from './components/ReviewScreen'
 
 function App() {
   const [step, setStep] = useState(1)
@@ -55,7 +56,19 @@ function App() {
           setIdFile={setIdFile}
         />
       )}
-      {step === 4 && <div className="form">Review coming soon</div>}
+      {step === 4 && (
+        <ReviewScreen
+          fullName={fullName}
+          email={email}
+          dob={dob}
+          street={street}
+          city={city}
+          country={country}
+          postalCode={postalCode}
+          idType={idType}
+          idFile={idFile}
+        />
+      )}
 
       <button onClick={() => setStep(step - 1)} disabled={step === 1}>
         Back
